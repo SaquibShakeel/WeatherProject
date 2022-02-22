@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(https://www.teahub.io/photos/full/103-1037596_miui-8-weather-wallpapers-desktop-for-laptop-wallpaper.jpg);
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+}
+h1{
+    font-size: 50px;
+}
+h1,
+form{
+        min-height: 20vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+form input, form button{
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background: white;
+}
+form button{
+    color: black;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+form button:hover{
+    background: black;
+    color: white;
+}
+    </style>
+</head>
+<body>
+    <h1>Your City's Weather</h1>
+    <form action="/" method="post">
+        <input type="text" name="cityName" id="cityInput" placeholder="City Name">
+        <button type="submit">GO</button>
+    </form>
+</body>
+</html>
