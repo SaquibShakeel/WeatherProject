@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(https://www.teahub.io/photos/full/103-1037596_miui-8-weather-wallpapers-desktop-for-laptop-wallpaper.jpg);
+            position: relative;
+            background-position: center;
+            background-size: cover;
+            color: white;
+            font-family: "Poppins", sans-serif;
+            min-height: 100vh;
+        }
+        h1{
+            font-size: 50px;
+            min-height: 20vh;
+        }
+        h1,
+        div{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+        }
+        .img{
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 30px;
+            max-height: 70px;
+        }
+        form button{
+            padding: 0.5rem;
+            font-size: 2rem;
+            border: 1px solid black;
+            border-radius: 10px;
+            color: black;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        form button:hover{
+            background: black;
+            color: white;
+            border: 1px solid white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Your City's Weather</h1><br><br><br>
+    <div>
+        <p>The weather is currently <%= description %>.</p>
+        <div class="img">
+            <img src= <%= iconUrl %> >
+        </div>
+    </div>
+    <br>
+    <div>
+        <h2>The temperature in <%= query %> is <%= temp %> degree celcius</h2>
+    </div>
+    <br><br>
+    <div>
+        <form action="/views/result" method="post" >
+            <button type="submit">HOME</button>
+        </form>
+    </div>
+</body>
+</html>
